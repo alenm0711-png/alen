@@ -58,7 +58,8 @@ const run = () => {
 		const a = Math.atan2(e.y - ep.y, e.x - ep.x);
 		e.x += (ep.x - e.x + (Math.cos(a) * (100 - i)) / 5) / 4;
 		e.y += (ep.y - e.y + (Math.sin(a) * (100 - i)) / 5) / 4;
-		const s = (100 + 2 * (1 - i)) / 30;
+		const k = (i === 8 || i === 14) ? 1.5 : 1;
+const s = ((162 + 4 * (1 - i)) / 50) * k;
 		e.use.setAttributeNS(
 			null,
 			"transform",
